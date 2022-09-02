@@ -37,7 +37,7 @@ Similarly, to train a sentence classifier from scratch, run:
 
 `python train_sentence_classifier.py`
 
-Note that our supervised model get sentence embedding from a Huggingface implementation of BERT model. Therefore, one have to make sure to run the following command to install necessary package.
+Note that our supervised model get sentence embedding from a Huggingface implementation of BERT model. Therefore, users have to make sure they have the transformers package installed. You can install the package with the following command.
 
 `pip install transformers`
 
@@ -49,9 +49,33 @@ Therefore, we propose an indirect supervision approach, ASSORT<sub>IS</sub>, to 
 To apply ASSORT<sub>IS</sub> on our dataset, use script in `model/indirect_supervision.py`.
 
 ## Chrome extension
-To give our users an opportunity to try ASSORT, 
+To give our users an opportunity to try ASSORT, we build a chrome extension that can summarize online SO posts. Below is a screenshot of our Chrome extension when properly installed in the browswer.
+
+[![chrome_extension](https://github.com/BonanKou/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts/blob/main/screenshots/chrome.png "chrome_extension")](https://github.com/BonanKou/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts/blob/main/screenshots/chrome.png "chrome_extension")
+
+Folder `chrome_extension` contains codes for the local server as well as the Chrome extension itself. To load the extension, first run `server.py` in `server` folder. Then go to chrome://extensions and upack the `extension` folder in developer mode. Then, open any Stack Overflow page, the extension should start to work.
 
 ## Experiment scripts
+We perform a quantative study to compare ASSORT<sub>IS</sub> and ASSORT<sub>S</sub> with 6 popular baselines. These baselines are listed below:
+
+- ***BERTSUM* **[^fn2] is an extractive summarization model that first uses BERT to encode sentences and then uses a transformer to select summative sentences. It outperforms several previous techniques on two popular text summarization datasets---NYT. In this experiment, we use the checkpoint of \liu{} that has the best performance on CNN/DailyMail.
+- *** BERTSUM (fine-tuned) *** is a fine-tuned version of BERTSUM. It is fine-tuned with the training data of the supervised ASSORT, including 2,424 SO posts and their summaries.
+  
+- ***wordpattern*** [^fn3] identifies essential sentences in a SO post using a set of 360 word patterns. These patterns are initially designed by Robillard and Chhetri~\cite{robillard2015recommending} to identify sentences containing indispensable knowledge in API documentations.
+  
+- ***simpleif*** [^fn3] is a technique proposed by Nadi and Treude. It is designed based on the insight that essential sentences may contain contextual information expressed in the form of conditions. Thus, simpleif identifies all sentences that have the word 'if' in them as essential sentences.
+  
+- ***contextif*** [^fn3] is another technique proposed by Nadi and Treude~\cite{essential_sentences}. It uses a set of heuristics to identify essential sentences that carry technical context and are useful.
+
+- ***lexrank*** [^fn4] is a commonly used unsupervised text summarization approach. It uses a stochastic graph-based method to compute the relative importance of sentences in a document and generates an extractive summary by selecting the top k sentences. We use k=5.
+
+[^fn2]: https://arxiv.org/pdf/1908.08345.pdf
+
+[^fn3]: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9054828
+
+[^fn4]: https://pypi.org/project/lexrank/
+
+  
 
 ## User Study
 
