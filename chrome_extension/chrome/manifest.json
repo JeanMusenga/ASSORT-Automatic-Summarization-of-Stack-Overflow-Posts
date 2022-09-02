@@ -1,0 +1,30 @@
+{
+    "name": "SO tracker",
+    "description": "Never miss a single post you visited!",
+    "version": "0.1.0",
+    "manifest_version": 3,
+    "icons" : {
+        "16": "heart.png",
+        "48": "heart.png",
+        "128": "heart.png"
+    },
+    "background": {
+        "service_worker": "./background.js"
+    },
+    "options_page": "./options.html",
+    "action": {
+        "default_popup": "./popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "storage",
+        "scripting",
+        "webNavigation"
+    ],
+
+    "host_permissions": [
+        "https://google.com/*",
+        "https://stackoverflow.com/*",
+        "https://stackoverflow.com/questions/*"
+    ]
+}
