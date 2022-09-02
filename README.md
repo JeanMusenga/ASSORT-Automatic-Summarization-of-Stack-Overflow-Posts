@@ -23,7 +23,7 @@ In general, the entire dataset contains sentences from 3,063 SO posts under popu
 [^fn1]: Kou, Bonan, et al. "SOSum: A Dataset of Stack Overflow Post Summaries." _2022 IEEE/ACM 19th International Conference on Mining Software Repositories (MSR)_. IEEE, 2022.
 ## ASSORT<sub>S</sub>,
 As our supervised model for summarizing SO posts, ASSORT achieves desirable performance on sentence-level extractive summarization of SO posts, outperforming a state-of-the-art extractive summarization model by 13% in terms of F1 score. ASSORT<sub>S</sub> takes three phases to summarize a SO answer post. Since answers to different types of questions follow different linguistic patterns, it first predicts the type of the SO question (Phase I). To account for the uncertainty of the question classifier, the answer post is fed into three sentence classification models separately, each of which is trained for one type of SO question (Phase II). ASSORT<sub>S</sub> predicts confidence scores with multiple sentence classifiers trained for different question categories. Finally, it ensembles the predictions of these models based on the likelihood of the question type to generate the final summary (Phase III). The figure below visualizes the three phases.
-
+[![Supervised](https://github.com/BonanKou/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts/blob/main/screenshots/supervised.png "Supervised")](http://github.com/BonanKou/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts/blob/main/screenshots/supervised.png "Supervised")
 (2)
 
 ## ASSORT<sub>IS</sub>,
