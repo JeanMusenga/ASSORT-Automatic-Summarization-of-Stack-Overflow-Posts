@@ -1,0 +1,419 @@
+/* Scroll smoothly */
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --rcolor: 147;
+    --gcolor: 212;
+    --bcolor: 255;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
+#origin {
+  font-size: 16px;
+  font-weight: normal !important;
+}
+/* #fixedContainer.fullmight { */
+
+/* edit the sidebar */
+#fixedContainer {
+    resize: both;
+    position: fixed;
+
+    height: 94.7vh;
+    width: 28.5vw;
+    left: 71vw;
+    top: 5.3vh;
+
+    display: flex;
+    min-height: 4.8vh;
+    min-width: 15vw;
+    max-height: 100vh;
+    /*max-width: 50vw;*/
+    /*overflow-y: scroll;
+    overflow-x: hidden;*/
+    overflow: auto;
+    z-index: 10000;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.678);
+    background-color: transparent;
+    border-radius: 30px 30px 0px 0px;
+
+    /*transition:
+      top 0.5s 0s cubic-bezier(.1, 1.2, .3, 1),
+      transform .5s 0s cubic-bezier(.1, 1.2, .3, 1),
+      width .5s .5s cubic-bezier(.1, 1.2, .3, 1),
+      opacity .3s;*/
+}
+
+/* #fixedContainer.sunset {
+  height: auto !important;
+  resize: horizontal;
+  min-width: 20vw;
+  max-width: 50vw;
+  position: fixed;
+  left: 70vw;
+  top:10vh;
+  display: flex;
+  overflow: hidden;
+  background-color: transparent;
+  border-radius: 30px;
+  display: flex;
+  max-height: 90vh;
+  z-index: 10000;
+  box-shadow: 0 0 3px 3px #00000030;
+  background-color: transparent;
+} */
+
+#empty {
+    height: 10vh;
+}
+
+#navigation {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 100%;
+    /* height: 50%; */
+    background-color: rgb(248, 248, 248);
+    box-shadow: 0 0 3px 2px rgba(41, 41, 41, 0.1);
+    border-radius: 50px;
+    overflow: auto;
+    min-height: 300px;
+    max-height: 600px;
+    z-index: 26;
+}
+
+#navigation:hover {
+    box-shadow: 0 0 10px 2px rgba(41, 41, 41, 0.1);
+}
+
+@supports (position: sticky) {
+    #navigation {
+        /* position: -webkit-sticky;
+        position: -moz-sticky;
+        position: -ms-sticky;
+        position: -o-sticky; */
+        position: sticky;
+        top: 10%;
+    }
+}
+
+.codeOnly {
+  background-color: violet;
+  margin-top: 20px;
+  line-height: 60px;
+  font-weight: bold;
+  padding: 0 40px;
+  border-radius: 30px 30px 30px 30px;
+  border: none;
+}
+
+.empty {
+  background-color: salmon;
+  margin-top: 20px;
+  line-height: 60px;
+  font-weight: bold;
+  padding: 0 40px;
+  border-radius: 30px 30px 30px 30px;
+  border: none;
+}
+
+.so_tracker_sentence {
+  cursor: pointer;
+}
+.extracted {
+    /* background-color:red; */
+    background-color: rgba(var(--rcolor), var(--gcolor), var(--bcolor), var(--acolor));
+}
+
+.selected_pre {
+    background-color: rgba(var(--rcolor), var(--gcolor), var(--bcolor), var(--acolor)) !important;
+}
+.leftmost {
+    padding-left: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.rightmost {
+    padding-right: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.nav-item {
+    background-color: white;
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+.badgeCountBlack {
+  color: black;
+}
+
+/* positions:
+static: In the flow
+relative: similar to static but allow relative position with respect to its original position in the flow 
+absolute: Remove it from flow. Suddenly remove inherited width/height but it will position itself according to the closest static or relative element.
+fixed: Always absolute with respect to screen, also out of flow
+sticky: acts as a relative, but acts as a fixed when parent is visible but it's not
+a */
+
+
+/* Sidebar stuff */
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+  }
+
+  .text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+ }
+  
+  html {
+    height: -webkit-fill-available;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+    height: -webkit-fill-available;
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  
+  .b-example-divider {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+  
+  .bi {
+    vertical-align: -.125em;
+    pointer-events: none;
+    fill: currentColor;
+  }
+  
+  .dropdown-toggle { outline: 0; }
+  
+  .nav-flush .nav-link {
+    border-radius: 0;
+  }
+  
+  .btn-toggle {
+    display: inline-flex;
+    align-items: center;
+    padding: .25rem .5rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, .65);
+    background-color: transparent;
+    border: 0;
+  }
+  .btn-toggle:hover,
+  .btn-toggle:focus {
+    color: rgba(0, 0, 0, .85);
+    background-color: #d2f4ea;
+  }
+  
+  .btn-toggle::before {
+    width: 1.25em;
+    line-height: 0;
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+    transition: transform .35s ease;
+    transform-origin: .5em 50%;
+  }
+  
+  .btn-toggle[aria-expanded="true"] {
+    color: rgba(0, 0, 0, .85);
+  }
+  .btn-toggle[aria-expanded="true"]::before {
+    transform: rotate(90deg);
+  }
+  
+  .btn-toggle-nav a {
+    display: inline-flex;
+    padding: .1875rem .5rem;
+    margin-top: .125rem;
+    margin-left: 1.25rem;
+    text-decoration: none;
+  }
+
+  .btn-toggle-nav a:hover,
+  .btn-toggle-nav a:focus {
+    background-color: #d2f4ea;
+  }
+  
+  .scrollarea {
+    overflow-y: auto;
+  }
+  
+  .fw-semibold { font-weight: 600; }
+  .lh-tight { line-height: 1.25; }
+
+  .align{
+    text-align: right;
+  }
+  
+  /* Traffic light */
+  #sidebar-header-wrapper {
+    justify-content: space-between;
+  }
+
+  #traffic-light {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #traffic-light-red {
+    background-color: red;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    margin-right: 10px;
+  }
+  #sidebar-header-wrapper {
+    padding: 0.5em!important;
+  }
+
+  #traffic-light-green, .green-lattern {
+    background-color: rgb(0, 255, 34);
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+  }
+
+  .red-lattern {
+    background-color: rgb(255, 47, 82);
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+  }
+
+  #traffic-light-green {
+    margin-right: 10px;
+  }
+.list-group-item {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.answer-tiny-info {
+  width: 100%;
+  display: flex;
+  margin-top: 12px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.user-feature {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tiny-user-image {
+  display: flex;
+}
+
+.user-reputation {
+  margin-left:3px;
+}
+
+.list-group-item p {
+  margin:0;
+}
+
+.code-exist {
+  margin-left: 10px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.code-exist div {
+  margin-bottom: 3px;
+}
+
+.code-exist p {
+  margin-left: 3px;
+}
+
+#color-picker {
+  -webkit-appearance: none;
+  padding: 0;
+  border: none;
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+#color-picker::-webkit-color-swatch {
+  border: none;
+  border-radius: 15px;
+  padding: 0;
+}
+#color-picker::-webkit-color-swatch-wrapper {
+  border: none;
+  border-radius: 15px;
+  padding: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.manually_selected {
+  background-color: rgba(173, 245, 153, 1);
+  /* background-color: black; */
+}
+
+.marked {
+  background-color: rgba(173, 245, 153, 1) !important;
+}
+
+.active {
+  background-color: cornflowerblue !important;
+}
+
+
+/* Change font size for user feature */
+.user-feature {
+  font-size: small;
+}
