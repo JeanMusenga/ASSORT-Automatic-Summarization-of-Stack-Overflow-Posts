@@ -37,7 +37,11 @@ Similarly, to train a sentence classifier from scratch, run:
 
 `python train_sentence_classifier.py`
 
-## ASSORT<sub>IS</sub>,
+Note that our supervised model get sentence embedding from a Huggingface implementation of BERT model. Therefore, one have to make sure to run the following command to install necessary package.
+
+`pip install transformers`
+
+## ASSORT<sub>IS</sub>
 
 ## Chrome extension
 
@@ -45,42 +49,6 @@ Similarly, to train a sentence classifier from scratch, run:
 
 ## User Study
 
-
-## SOSum 
-### Sentence-level SO post summarization
-Stack Overflow (SO) is becoming an indispensable part of the modern software development workflow. However, navigating SO posts and comparing different solutions is time-consuming and cumbersome given the limited time, attention, and memory capacity of programmers. Recent research has proposed to summarize SO posts to concise text to help programmers quickly decide the relevance and quality of SO posts. Yet there is no large, comprehensive dataset of high-quality SO post summaries, which hinders the development and evaluation of post summarization techniques. We present SOSum, a dataset of 2278 popular SO posts with manually labeled summative sentences. Questions in SOSum cover 669 tags with a median view count of 253K and a median post score of 17. This dataset will foster research on sentence-level summarization of SO posts and has the potential to facilitate text summarization research on other types of textual software artifacts such as programming tutorials.
-
-### Data format
-SOSum is stored in two separate CSV files: `question.csv` and `answer.csv`. Both can be found in `data` folder.
-`question.csv` contains metadata of 506 popular SO questions. We summarize its fields as below:
-|Field | Description|
-| ----------- | ----------- |
-|Question Id| Post Id of the SO question|
-|Question Type| 1 for conceptual questions, 2 for how-to questions, 3 for debug-corrective questions|
-|Question Title |Question title as a string|
-|Question Body |A list of sentences from the question post content|
-|Tags |SO tags associated with a question|
-|Answer Posts| A list of post ids separated by comma|
-
-`answer.csv` contains metadata of 506 popular SO questions. We summarize its fields as below:
-|Field | Description|
-| ----------- | ----------- |
-|Answer Id |Post Id of a SO answer post|
-|Answer Body |A list of sentences from the post content|
-|Summary |Summative sentences from the post content|
-
-## Labeling tools
-Both the GUI and chrome extension can be found in `labeling_tools` folder.
-
-### GUI for labeling CSV files
-~A GUI tool is developed to facilitate labeling of SO posts in CSV files with the same format of `question.csv` and `answer.csv`.~ (**Update on 2/2/2022. Instead of `question.csv` and `answer.csv`, load `example.csv` under the `labeling_tools` folder in the GUI.**) A screenshot of our GUI is displayed below.
-![A screenshot of GUI](https://github.com/BonanKou/SOSum-A-Dataset-of-Extractive-Summaries-of-Stack-Overflow-Posts-and-labeling-tools/blob/main/screenshot_wide.png)
-
-
-### Chrome extension for online labeling
-A link for tutorial video: https://youtu.be/Xo5JyW486O4.
-
-As many new SO posts are posted everyday, one may also be interested in labeling SO posts from the website rather than the data dump. Therefore, we also developed a Chrome extension for labeling SO posts in the web browser. A user can select one or more sentences from a post, right click, and choose ``Mark as Summative Sentence'' to label them as summative sentences. Once the labeling is done, the user can press ``CTRL+ENTER'' to download the post content as well as the labeled summative sentences into a CSV file.
 
 
 
