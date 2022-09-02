@@ -26,12 +26,15 @@ As our supervised model for summarizing SO posts, ASSORT achieves desirable perf
 [![Supervised](https://github.com/BonanKou/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts/blob/main/screenshots/supervised.png "Supervised")](http://github.com/BonanKou/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts/blob/main/screenshots/supervised.png "Supervised")
 
 
+
 The script for training the question classifier and sentence classifier can be found in `model` folder. For example, if you want to train a question classifier from scratch, simply run:
+
 `python train_question_classifier.py`
 
 By default, this file will split the train/dev/test sets with the ratio of 8:1:1 to train a question classifer which is a SVM classifier. After training is done, the script will evaluate the classifier's performance on the test set.
 
 Similarly, to train a sentence classifier from scratch, run:
+
 `python train_sentence_classifier.py`
 
 ## ASSORT<sub>IS</sub>,
