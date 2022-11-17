@@ -51,7 +51,7 @@ To apply ASSORT<sub>IS</sub> on our dataset, use script in `model/indirect_super
 ## Chrome extension
 To give our users an opportunity to try ASSORT, we build a chrome extension that can summarize online SO posts. Below is a screenshot of our Chrome extension when properly installed in the browswer.
 
-[![chrome_extension](https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/chrome.png"chrome_extension")](https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/chrome.png "chrome_extension")
+[![chrome_extension](https://i.ibb.co/8286sh7/chrome.png "chrome_extension")](https://i.ibb.co/8286sh7/chrome.png "chrome_extension")
 
 Folder `chrome_extension` contains codes for the local server as well as the Chrome extension itself. To load the extension, first run `server.py` in `server` folder. Then go to chrome://extensions and upack the `extension` folder in developer mode. Then, open any Stack Overflow page, the extension should start to work.
 
