@@ -1,6 +1,9 @@
 
 # Updates based on reviewer's request
 ## Additional experiments
+
+<img src="https://github.com/BonanKou/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts/blob/main/screenshots/summaries.png" alt="drawing" width="100"/>
+
 In response to the comments of the reviewers, we conducted two experiments:
  - We experimentally determine the effect of each linguistic pattern by removing them from the supervised model one at a time. The changes in F-1 score due to the removal of each feature are shown below.
  - We perform additional experiments to support the optimality of hyperparameters that are currently used in the model (epoches, learning rate, number of layers in the classification head).
