@@ -1,5 +1,5 @@
 
-# Updates based on reviewer's request
+# Updates based on the reviewers's comments
 ## Additional experiments
 In response to the comments of the reviewers, we conducted two experiments:
  - We experimentally determine the effect of each linguistic pattern by removing them from the supervised model one at a time. The changes in F-1 score due to the removal of each feature are shown below.
