@@ -1,4 +1,3 @@
-
 # Updates based on the reviewers's comments
 ## Additional experiments
 In response to the comments of the reviewers, we conducted two experiments:
@@ -23,7 +22,7 @@ For the **chrome extension**, we uploaded a previous version which should run mo
  - Finally, you will be able to see the navigation panel on the Stack Overflow webpage which shows the summative sentences selected by a checkpoint of ASSORT<sub>S</sub>.
   <img src="https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/running.png" alt="drawing" width="700"/>
 
-## User study design
+## [User study design](#user_study)
 The reviewers commented on the necessity of clarifying the user study design. We include a screenshot of the questionnaire used in the user study.
 
 - The participants are first provided with a screenshot of the Stack Overflow question.
