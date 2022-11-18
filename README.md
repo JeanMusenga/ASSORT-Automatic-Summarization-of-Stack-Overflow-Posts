@@ -7,9 +7,21 @@ In response to the comments of the reviewers, we conducted two experiments:
  - We experiment with different classification heads of random forest, decision tree, and gradient boosting. All of them failed to achieve the same accuracy achieved with neural network classification head.
  
 ## Artifact
-We thank the reviewers for pointing out that our model doesn't work out of the box. We have uploaded a jupyter notebook `supervised.ipynb` containing necessary codes to train ASSORT<sub>S</sub> and a `requirement.txt` file that records the environment on which ASSORT is trained. Both files can be found in the `model` folder. We also agree with reviewer A's opinion that it will be optimal to build a docker image with all dependencies installed. The first author is re-structuring the development code base and building the image. We will upload it to this repository once it is done.
-We also thank reviewer B for pointing out the links to images are broken in this repository. All the links have been fixed.
-We also provide detailed instructions on how to run the Chrome extension below:
+We thank the reviewers for pointing out that our model doesn't work out of the box. We have uploaded a **jupyter notebook** `supervised.ipynb` containing necessary codes to train ASSORT<sub>S</sub> and a `requirement.txt` file that records the environment on which ASSORT is trained. Both files can be found in the `model` folder. We also agree with reviewer A's opinion that it will be optimal to build a docker image with all dependencies installed. The first author is re-structuring the development code base and building the image. We will upload it to this repository once it is done.
+
+We also thank reviewer B for pointing out the links to images are broken in this repository. **All the links have been fixed.**
+
+For the **chrome extension**, we uploaded a previous version which should run more stably as well as a checkpoint of ASSORT<sub>S</sub>. This version has a slightly different interface and includes some obsolete features such as indicating confidence of summative sentences selected with color brightness. We will upload the newest version of Chrome extension once we finish optimizing its compatibility. To run the extension:
+ - Unpack the Chrome extension by visiting `chrome://extensions` on your Chrome browswer. Click the `Load unpacked` button. 
+
+ - Select `chrome` folder under `SOFT-master` which include a manifest file that contains the extension configuration.
+ 
+ - Open a command line interface and cd to `SOFT-master/server`, where you simply run `python server.py`. 
+ 
+ - Open any Stack Overflow thread. On the cli, you will see a series of outputs for debugging purposes.
+ 
+ - Finally, you will be able to see the navigation panel on the Stack Overflow webpage which shows the summative sentences selected by a checkpoint of ASSORT<sub>S</sub>.
+ 
 
 ## User study design
 The reviewers commented on the necessity of clarifying the user study design. We include a screenshot of the questionnaire used in the user study.
