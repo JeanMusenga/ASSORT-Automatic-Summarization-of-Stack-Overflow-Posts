@@ -11,17 +11,18 @@ We thank the reviewers for pointing out that our model doesn't work out of the b
 
 We also thank reviewer B for pointing out the links to images are broken in this repository. **All the links have been fixed.**
 
-For the **chrome extension**, we uploaded a previous version which should run more stably as well as a checkpoint of ASSORT<sub>S</sub>. This version has a slightly different interface and includes some obsolete features such as indicating confidence of summative sentences selected with color brightness. We will upload the newest version of Chrome extension once we finish optimizing its compatibility. To run the extension:
+For the **chrome extension**, we uploaded a previous version which should run more stably as well as a checkpoint of ASSORT<sub>S</sub> (in `SOFT-master` folder). This version has a slightly different interface and includes some obsolete features such as indicating confidence of summative sentences selected with color brightness. We will upload the newest version of Chrome extension once we finish optimizing its compatibility. To run the extension:
  - Unpack the Chrome extension by visiting `chrome://extensions` on your Chrome browswer. Click the `Load unpacked` button. 
+
+[![chrome](https://github.com/BonanKou/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts/blob/main/screenshots/extension.png "chrome")](https://github.com/BonanKou/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts/blob/main/screenshots/extension.png "chrome")
 
  - Select `chrome` folder under `SOFT-master` which include a manifest file that contains the extension configuration.
  
- - Open a command line interface and cd to `SOFT-master/server`, where you simply run `python server.py`. 
- 
- - Open any Stack Overflow thread. On the cli, you will see a series of outputs for debugging purposes.
+ - Open a command line interface and cd to `SOFT-master/server`, where you simply run `python server.py`. Open any Stack Overflow thread. On the cli, you will see a series of outputs for debugging purposes. 
+ [![cli](https://github.com/BonanKou/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts/blob/main/screenshots/cli.png "cli")](https://github.com/BonanKou/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts/blob/main/screenshots/cli.png "cli")
  
  - Finally, you will be able to see the navigation panel on the Stack Overflow webpage which shows the summative sentences selected by a checkpoint of ASSORT<sub>S</sub>.
- 
+ [![running](https://github.com/BonanKou/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts/blob/main/screenshots/running.png "running")](https://github.com/BonanKou/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts/blob/main/screenshots/running.png "running")
 
 ## User study design
 The reviewers commented on the necessity of clarifying the user study design. We include a screenshot of the questionnaire used in the user study.
