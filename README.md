@@ -1,14 +1,14 @@
 # Updates based on the reviewers's comments
-We updated the README.md file to include the following sections:
+We have uploaded the results for two experiments in pdf (`model_structure.pdf`, `linguistic_pattern.pdf`). We have also updated the README.md file to include the following sections:
 - [Artifact](#artifact)
 - [User study](#user_study)
 
 
-## Additional experiments
+<!-- ## Additional experiments
 In response to the comments of the reviewers, we conducted two experiments:
  - We experimentally determine the effect of each linguistic pattern by removing them from the supervised model one at a time. The changes in F-1 score due to the removal of each feature are shown below.
  - We perform additional experiments to support the optimality of hyperparameters that are currently used in the model (epoches, learning rate, number of layers in the classification head).
- - We experiment with different classification heads of random forest, decision tree, and gradient boosting. All of them failed to achieve the same accuracy achieved with neural network classification head.
+ - We experiment with different classification heads of random forest, decision tree, and gradient boosting. All of them failed to achieve the same accuracy achieved with neural network classification head. -->
  
 ## <a name="artifact"></a>Artifact
 We thank the reviewers for pointing out that our model doesn't work out of the box. We have uploaded a **jupyter notebook** `supervised.ipynb` containing necessary codes to train ASSORT<sub>S</sub> and a `requirement.txt` file that records the environment on which ASSORT is trained. Both files can be found in the `model` folder. We also agree with reviewer A's opinion that it will be optimal to build a docker image with all dependencies installed. The first author is re-structuring the development code base and building the image. We will upload it to this repository once it is done.
