@@ -19,9 +19,9 @@ For the **chrome extension**, we uploaded a previous version which should run mo
  - Unpack the Chrome extension by visiting `chrome://extensions` on your Chrome browswer. Click the `Load unpacked` button. 
  <img src="https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/chrome.png" alt="drawing" width="400"/>
 
- - Select `chrome` folder under `SOFT-master` which include a manifest file that contains the extension configuration.
+ - Select `chrome` folder under `chrome_extension` which include a manifest file that contains the extension configuration.
  
- - Open a command line interface and cd to `SOFT-master/server`, where you simply run `python server.py`. Open any Stack Overflow thread. On the cli, you will see a series of outputs for debugging purposes. 
+ - Open a command line interface and cd to `chrome_extension/server`, where you simply run `python server.py`. Open any Stack Overflow thread. On the cli, you will see a series of outputs for debugging purposes. 
   <img src="https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/cli.png" alt="drawing" width="400"/>
  
  - Finally, you will be able to see the navigation panel on the Stack Overflow webpage which shows the summative sentences selected by a checkpoint of ASSORT<sub>S</sub>.
