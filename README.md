@@ -1,49 +1,47 @@
 # Updates based on the reviewers's comments
-We have uploaded the results for two experiments in pdf (`model_structure.pdf`, `linguistic_pattern.pdf`). We have also updated the README.md file to include the following sections:
+We have done two additional experiments as reviewers suggested and summarized the results in two pdf files (`model_structure.pdf`, `linguistic_pattern.pdf`). We have also updated the README.md file to include the following sections:
 - [Artifact](#artifact)
 - [User study](#user_study)
-
-
-<!-- ## Additional experiments
-In response to the comments of the reviewers, we conducted two experiments:
- - We experimentally determine the effect of each linguistic pattern by removing them from the supervised model one at a time. The changes in F-1 score due to the removal of each feature are shown below.
- - We perform additional experiments to support the optimality of hyperparameters that are currently used in the model (epoches, learning rate, number of layers in the classification head).
- - We experiment with different classification heads of random forest, decision tree, and gradient boosting. All of them failed to achieve the same accuracy achieved with neural network classification head. -->
  
 ## <a name="artifact"></a>Artifact
-We thank the reviewers for pointing out that our model doesn't work out of the box. We have uploaded a **jupyter notebook** `supervised.ipynb` containing necessary codes to train ASSORT<sub>S</sub> and a `requirement.txt` file that records the environment on which ASSORT is trained. Both files can be found in the `model` folder. We also agree with reviewer A's opinion that it will be optimal to build a docker image with all dependencies installed. The first author is re-structuring the development code base and building the image. We will upload it to this repository once it is done.
+We thank the reviewers for their suggestions on improving the reproducibility of our artifact. Following Reviewer A's suggestion, we have uploaded a `requirement.txt` file that specifies the library dependencies and versions. We have also uploaded a jupyter notebook `model/supervised.ipynb` to train ASSORT<sub>S</sub>. We are creating a Docker image now and will upload it to this repository once it is done.
 
 We also thank reviewer B for pointing out the links to images are broken in this repository. **All the links have been fixed.**
 
-For the **chrome extension**, we uploaded a previous version which should run more stably as well as a checkpoint of ASSORT<sub>S</sub> (in `chrome_extension` folder). This version has a slightly different interface and includes some obsolete features such as indicating confidence of summative sentences selected with color brightness. We will upload the newest version of Chrome extension once we finish optimizing its compatibility. To run the extension:
- - Unpack the Chrome extension by visiting `chrome://extensions` on your Chrome browswer. Click the `Load unpacked` button. 
+We have included detailed instructions and screenshots below to install the Chrome extension, as Reviewer A suggested. We have also included a checkpoint of the trained ASSORT<sub>S</sub> model (`chrome_extension/server/1110model.pt`). To run the extension:
+ - Unpack the Chrome extension by visiting `chrome://extensions` on your Chrome browswer.
  <img src="https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/chrome.png" alt="drawing" width="400"/>
-
- - Select `chrome` folder under `chrome_extension` which include a manifest file that contains the extension configuration.
  
- - Open a command line interface and cd to `chrome_extension/server`, where you simply run `python server.py`. Open any Stack Overflow thread. On the cli, you will see a series of outputs for debugging purposes. 
+ - Click the `Load unpacked` button and select `chrome_extension/chrome`. 
+ 
+ - Open a commandline interface and go to `chrome_extension/server`. 
+ 
+ - Run `python server.py` to start the server.
+ 
+ - Open any Stack Overflow thread. On the cli, you will see a series of outputs for debugging purposes. 
   <img src="https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/cli.png" alt="drawing" width="400"/>
  
  - Finally, you will be able to see the navigation panel on the Stack Overflow webpage which shows the summative sentences selected by a checkpoint of ASSORT<sub>S</sub>.
   <img src="https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/running.png" alt="drawing" width="400"/>
 
 ## <a name="user_study"></a>User study design
-We include screenshots below to illustrate the user study design. Each participant were asked to rate the quality of summaries generated for 10 answer posts.
+We include screenshots below to illustrate the user study design. Each participant were asked to rate the quality of summaries generated for 10 answer posts. Below we illustrate the procedure for each task.
 
-- The participants are first provided with a screenshot of the Stack Overflow question.
+- First, participants were given a screenshot of a Stack Overflow question and asked to read the question carefully to understand the context.
  <img src="https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/question.png" alt="drawing" width="400"/>
  
-- The participants are asked to report their expertise on the topic after carefully reading the question.
+- Second, participants were asked to report their expertise on the topic after carefully reading the question. This is to understand how familiar they were with the topic asked in the question.
  <img src="https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/expertise.png" alt="drawing" width="400"/>
  
-- The participants are asked to read an answer under the specific question.
+- Third, participants were then asked to read the answer post to be summarized for this question. This is to ensure they understand the content to be summarized before reading the summaries.
  <img src="https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/answer.png" alt="drawing" width="400"/>
 
-- The participants are shown with three summaries generated by different models. To mitigate the bias, we do not reveal which model generates which summary and the order of summaries is randomized across tasks.
+- Fourth, participants were shown with three summaries generated by different models. To mitigate bias, we did not reveal which model generated which summary. The order of summaries was also randomized across tasks.
  <img src="https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/summaries.png" alt="drawing" width="400"/>
 
-- The participants are asked to evaluate summary quality in the five different aspects.
+- Fifth, participants were asked to evaluate the quality of summaries in the five different aspects.
 <img src="https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/five_dimensions.png" alt="drawing" width="400"/>
+
 - Finally, the participants then move on to the next answer post by clicking the Next button.
 
 # (Original README.md) Automated Summarization of Stack Overflow Posts
