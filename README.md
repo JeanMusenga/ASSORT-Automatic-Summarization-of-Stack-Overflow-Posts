@@ -15,7 +15,7 @@ We thank the reviewers for pointing out that our model doesn't work out of the b
 
 We also thank reviewer B for pointing out the links to images are broken in this repository. **All the links have been fixed.**
 
-For the **chrome extension**, we uploaded a previous version which should run more stably as well as a checkpoint of ASSORT<sub>S</sub> (in `SOFT-master` folder). This version has a slightly different interface and includes some obsolete features such as indicating confidence of summative sentences selected with color brightness. We will upload the newest version of Chrome extension once we finish optimizing its compatibility. To run the extension:
+For the **chrome extension**, we uploaded a previous version which should run more stably as well as a checkpoint of ASSORT<sub>S</sub> (in `chrome_extension` folder). This version has a slightly different interface and includes some obsolete features such as indicating confidence of summative sentences selected with color brightness. We will upload the newest version of Chrome extension once we finish optimizing its compatibility. To run the extension:
  - Unpack the Chrome extension by visiting `chrome://extensions` on your Chrome browswer. Click the `Load unpacked` button. 
  <img src="https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/chrome.png" alt="drawing" width="400"/>
 
