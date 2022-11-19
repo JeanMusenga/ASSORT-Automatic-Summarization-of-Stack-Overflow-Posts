@@ -40,7 +40,7 @@ We include screenshots below to illustrate the user study design. Each participa
  <img src="https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/summaries.png" alt="drawing" width="400"/>
 
 - Fifth, participants were asked to evaluate the quality of summaries in the five different aspects.
-<img src="https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/five_dimensions.png" alt="drawing" width="400"/>
+<img src="https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/dimension.png" alt="drawing" width="400"/>
 
 - Finally, the participants then move on to the next answer post by clicking the Next button.
 
