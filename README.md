@@ -1,5 +1,5 @@
 # Updates based on the reviewers's comments
-We have done two additional experiments as reviewers suggested and summarized the results in two pdf files (`model_structure.pdf`, `linguistic_pattern.pdf`). We have also updated the README.md file to include the following sections:
+We have done two additional experiments as reviewers suggested and summarized the results in two pdf files (`model_structure.pdf`, `linguistic_patterns.pdf`). We have also updated the README.md file to include the following sections:
 - [Artifact](#artifact)
 - [User study](#user_study)
  
