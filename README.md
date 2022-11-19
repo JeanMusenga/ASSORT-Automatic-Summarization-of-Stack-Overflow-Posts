@@ -22,7 +22,7 @@ For the **chrome extension**, we uploaded a previous version which should run mo
  - Finally, you will be able to see the navigation panel on the Stack Overflow webpage which shows the summative sentences selected by a checkpoint of ASSORT<sub>S</sub>.
   <img src="https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/running.png" alt="drawing" width="700"/>
 
-## <a href="#user_study">User study design</a>
+## <a name="#user_study">User study design</a>
 We include screenshots below to illustrate the user study design. Each participant were asked to rate the quality of summaries generated for 10 answer posts.
 
 - The participants are first provided with a screenshot of the Stack Overflow question.
