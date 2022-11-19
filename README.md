@@ -43,7 +43,7 @@ We include screenshots below to illustrate the user study design. Each participa
  <img src="https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/summaries.png" alt="drawing" width="700"/>
 
 - The participants are asked to evaluate summary quality in the five different aspects.
-
+<img src="https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/five_dimensions.png" alt="drawing" width="700"/>
 - Finally, the participants then move on to the next answer post by clicking the Next button.
 
 # (Original README.md) Automated Summarization of Stack Overflow Posts
