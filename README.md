@@ -10,8 +10,7 @@ We also thank reviewer B for pointing out the links to images are broken in this
 
 We have included detailed instructions and screenshots below to install the Chrome extension, as Reviewer A suggested. We have also included a checkpoint of the trained ASSORT<sub>S</sub> model (`chrome_extension/server/1110model.pt`). To run the extension:
  - Unpack the Chrome extension by visiting `chrome://extensions` on your Chrome browswer.
- <img src="https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/chrome.png" alt="drawing" width="400"/>
- 
+
  - Click the `Load unpacked` button and select `chrome_extension/chrome`. 
  
  - Open a commandline interface and go to `chrome_extension/server`. 
