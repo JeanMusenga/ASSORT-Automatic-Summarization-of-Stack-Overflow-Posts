@@ -4,7 +4,9 @@ We have done two additional experiments as reviewers suggested and summarized th
 - [User study](#user_study)
 
 
-```python filter_posts.py```
+```
+python filter_posts.py
+```
  
 ## <a name="artifact"></a>Artifact
 We thank the reviewers for their suggestions on improving the reproducibility of our artifact. Following Reviewer A's suggestion, we have uploaded a `requirement.txt` file that specifies the library dependencies and versions. We have also uploaded a jupyter notebook `model/supervised.ipynb` to train ASSORT<sub>S</sub>. We are creating a Docker image now and will upload it to this repository once it is done.
