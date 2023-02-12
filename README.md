@@ -5,9 +5,21 @@ We have done two additional experiments as reviewers suggested and summarized th
 
 
 ```
-python filter_posts.py
+NAME                                     			READY   STATUS    RESTARTS   AGE
+adservice-76bdd69666-ckc5j               	1/1     Running   0          2m58s
+cartservice-66d497c6b7-dp5jr             	1/1     Running   0          2m59s
+checkoutservice-666c784bd6-4jd22          1/1     Running   0          3m1s
+currencyservice-5d5d496984-4jmd7          1/1     Running   0          2m59s
+emailservice-667457d9d6-75jcq            	1/1     Running   0          3m2s
+frontend-6b8d69b9fb-wjqdg                	1/1     Running   0          3m1s
+loadgenerator-665b5cd444-gwqdq            1/1     Running   0          3m
+paymentservice-68596d6dd6-bf6bv           1/1     Running   0          3m
+productcatalogservice-557d474574-888kr    1/1     Running   0          3m
+recommendationservice-69c56b74d4-7z8r5    1/1     Running   0          3m1s
+redis-cart-5f59546cdd-5jnqf              1/1     Running   0          2m58s
+shippingservice-6ccc89f8fd-v686r         1/1     Running   0          2m58s
 ```
- 
+
 ## <a name="artifact"></a>Artifact
 We thank the reviewers for their suggestions on improving the reproducibility of our artifact. Following Reviewer A's suggestion, we have uploaded a `requirement.txt` file that specifies the library dependencies and versions. We have also uploaded a jupyter notebook `model/supervised.ipynb` to train ASSORT<sub>S</sub>. We are creating a Docker image now and will upload it to this repository once it is done.
 
