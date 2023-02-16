@@ -16,9 +16,9 @@ We have included detailed instructions and screenshots below to install the Chro
  - Open a commandline interface and go to `chrome_extension/server`. 
  
  - Run `python server.py` to start the server.
- 
+
  - Open any Stack Overflow thread. On the cli, you will see a series of outputs for debugging purposes. 
-  <img src="https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/cli.png" alt="drawing" width="400"/>
+  <img src=" https://github.com/BonanKou/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts/tree/main/screenshots/cli.png" alt="drawing" width="400"/>
  
  - Finally, you will be able to see the navigation panel on the Stack Overflow webpage which shows the summative sentences selected by a checkpoint of ASSORT<sub>S</sub>.
   <img src="https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/running.png" alt="drawing" width="400"/>
