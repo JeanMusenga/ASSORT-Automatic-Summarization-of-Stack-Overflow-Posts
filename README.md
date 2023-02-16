@@ -22,7 +22,8 @@ We have included detailed instructions and screenshots below to install the Chro
   <img src="https://github.com/BonanKou/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts/blob/main/screenshots/cli.png" alt="drawing" width="400"/>
  
  - Finally, you will be able to see the navigation panel on the Stack Overflow webpage which shows the summative sentences selected by a checkpoint of ASSORT<sub>S</sub>.
-  <img src="https://anonymous.4open.science/r/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts-4FE3/screenshots/running.png" alt="drawing" width="400"/>
+ - 
+  <img src="https://github.com/BonanKou/ASSORT-Automatic-Summarization-of-Stack-Overflow-Posts/blob/main/screenshots/running.png" alt="drawing" width="400"/>
 
 ## <a name="user_study"></a>User study design
 We include screenshots below to illustrate the user study design. Each participant were asked to rate the quality of summaries generated for 10 answer posts. Below we illustrate the procedure for each task.
